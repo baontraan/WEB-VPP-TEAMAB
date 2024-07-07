@@ -1,6 +1,6 @@
-const sideBar = document.querySelector(".sideBar");
-const subMenu = document.querySelector(".sub-menu");
-sideBar.addEventListener("click", function () {
-  sideBar.classList.toggle("active");
-  subMenu.classList.toggle("active");
-});
+const slideValue = document.querySelector(".sliderValue span");
+const inputSlide = document.querySelector(".range .field input");
+inputSlide.oninput = function () {
+  const value = inputSlide.value;
+  slideValue.textContent = value;
+};
