@@ -1,0 +1,794 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul li {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header .top {
+    margin: 10px 0;
+    border-bottom: 1px solid #e9e3e3;
+}
+
+.top input {
+    width: 50%;
+    outline: none;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.top input::placeholder {
+    text-align: center;
+}
+
+.top .icon {
+    padding: 12px 20px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    position: absolute;
+    border-radius: 3px;
+}
+
+.top .list {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.list li a {
+    text-decoration: none;
+    border-right: 1px solid #e9e3e3;
+    padding-right: 20px;
+    color: grey;
+    transition: 0.5s;
+}
+
+.list li a:last-child {
+    font-size: 18px;
+}
+
+.list li a:hover {
+    color: red;
+}
+
+.bot {
+    border-bottom: 1px solid #e9e3e3;
+}
+
+.bot .logo {
+    display: inline-block;
+    width: 160px;
+}
+
+.bot .list-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.list-menu>li {
+    margin-top: 25px;
+}
+
+.list-menu>li>a {
+    padding: 15px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+}
+
+.list-menu>li>a:hover {
+    color: red;
+    padding: 15px;
+    background-color: rgb(227, 224, 224);
+}
+
+/* According */
+.list-menu>li {
+    position: relative;
+}
+
+.list-menu .according {
+    position: absolute;
+    padding: 15px;
+    background-color: #fcfcfc;
+    z-index: 9;
+    top: 80px;
+    width: 180px;
+    pointer-events: none;
+    transition: all ease-in-out 0.5s;
+    opacity: 0;
+    box-shadow: 5px #fff;
+}
+
+.according .list-according {
+    margin: 10px 0;
+}
+
+.according .list-according a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.according .list-according a:hover {
+    color: red;
+}
+
+.list-menu li:hover .according {
+    pointer-events: visible;
+    opacity: 1;
+    top: 39px;
+}
+
+.list-menu .chevron i {
+    transform: rotate(180deg);
+}
+
+/* hot product */
+.card {
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: red;
+}
+
+.card-body .card-title {
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 14px;
+    text-align: center;
+}
+
+.card-body .card-title:hover {
+    color: red;
+}
+
+.card-body .card-star {
+    cursor: pointer;
+}
+
+.card-star i {
+    color: rgb(231, 205, 11);
+    margin: 15px 0;
+}
+
+.price {
+    font-size: 19px;
+    position: relative;
+    color: rgb(214, 6, 6);
+    font-weight: 500;
+}
+
+.price .dong {
+    position: absolute;
+    top: -6px;
+    font-size: 14px;
+}
+
+.price .discount {
+    margin-left: 15px;
+    color: rgb(106, 104, 104);
+    text-decoration: line-through;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.card .sale {
+    padding: 0 10px;
+    background-color: rgb(226, 4, 4);
+    width: 65px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 0;
+}
+
+.decor {
+    position: relative;
+}
+
+.decor::after {
+    content: "";
+    width: 20%;
+    height: 1px;
+    display: block;
+    margin-top: 10px;
+    background-color: #000;
+    position: absolute;
+    left: 40%;
+    transform: translateY(-40%);
+}
+
+.decor-1 {
+    position: relative;
+}
+
+.decor-1::after {
+    content: "";
+    width: 10%;
+    height: 1px;
+    display: block;
+    margin-top: 10px;
+    background-color: #000;
+    position: absolute;
+    left: 45%;
+    transform: translateY(-45%);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(226, 4, 4);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: rgb(245, 66, 66);
+}
+
+.footer {
+    background-color: rgba(18, 17, 17, 0.879);
+    padding: 0 30px 35px 0;
+}
+
+.title {
+    color: #fff;
+    margin: 35px 0 25px 31px;
+    font-weight: 650;
+}
+
+.about .about-cty {
+    color: white;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.footer .list-product a {
+    margin: 20px 0;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.footer .list-product a:hover {
+    color: red;
+}
+
+.footer .list-support .support a {
+    text-decoration: none;
+    margin: 10px 0;
+    color: white;
+    font-weight: 400;
+    display: block;
+    transition: 0.5s;
+}
+
+.footer .list-support .support a:hover {
+    color: red;
+}
+
+.footer .connect {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .connect .social a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+    padding: 25px;
+    background-color: red;
+    width: 35px;
+    border-radius: 28px;
+    position: relative;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.icon-social {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    font-size: 20px;
+}
+
+.footer .connect .social a:hover {
+    background-color: rgb(234, 66, 66);
+}
+
+.list-support .support {
+    margin: 20px 0;
+}
+
+.sideBar {
+    font-size: 27px;
+    cursor: pointer;
+    color: rgb(85, 83, 83);
+    display: none;
+    position: absolute;
+    top: 33px;
+    right: 40px;
+}
+
+.sideBar i:last-child {
+    display: none;
+    transform: translateY(10px);
+}
+
+.sideBar.active i:last-child {
+    display: block;
+}
+
+.sideBar.active i:first-child {
+    display: none;
+}
+
+.shopping .icon-shopping {
+    text-decoration: none;
+    display: block;
+    color: #000;
+    font-size: 27px;
+    cursor: pointer;
+    position: absolute;
+    top: 33px;
+    left: 40px;
+    display: none;
+}
+
+.sub-menu {
+    padding: 15px 20px;
+    background-color: #727171f6;
+    position: absolute;
+    top: 0;
+    left: -390px;
+    width: 25%;
+    height: 200vh;
+    z-index: 2;
+    transition: 0.6s;
+}
+
+.sub-menu.active {
+    left: 0;
+}
+
+.onTop {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #d0d0d08f;
+}
+
+.onTop .users-icon {
+    margin: 15px 0;
+    color: #ebe5e5;
+}
+
+.onTop .users-icon a {
+    text-decoration: none;
+    color: #ebe5e5;
+    cursor: pointer;
+}
+
+.onTop .find {
+    width: 60%;
+    padding: 3px 10px;
+    outline: none;
+}
+
+.onTop .icon-find {
+    padding: 12px 20px;
+    background-color: red;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.searching {
+    display: flex;
+}
+
+.onBot .list-submenu li {
+    padding: 15px 0;
+    position: relative;
+    transform: translateX(-31px);
+    border-bottom: 1px solid #d0d0d08f;
+    font-size: 14px;
+}
+
+.list-submenu a {
+    text-decoration: none;
+    color: #ebe5e5;
+}
+
+/* responsive  */
+@media (max-width: 1200px) {
+    .list-menu li {
+        font-size: 14px;
+    }
+
+    .list-menu .mini-icon {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .header .top {
+        display: none;
+    }
+
+    .list-menu li {
+        display: none;
+    }
+
+    .bot .logo {
+        margin-top: 15px;
+        width: 160px;
+    }
+}
+
+/* Responsive sideBar */
+@media (max-width: 991px) {
+    .sideBar {
+        display: block;
+    }
+
+    .shopping .icon-shopping {
+        display: block;
+    }
+}
+
+/* Responsive Sub Menu */
+@media (max-width:890px) {
+    .onTop .find {
+        width: 80%;
+        padding: 3px 5px;
+    }
+
+    .onTop .icon-find {
+        padding: 12px;
+        background-color: red;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    .sub-menu {
+        width: 40%;
+    }
+}
+
+@media (max-width:760px) {
+    .onTop .find {
+        width: 90%;
+        padding: 3px 5px;
+    }
+
+    .onTop .icon-find {
+        padding: 10px;
+        background-color: red;
+        color: #fff;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:572px) {
+    .sub-menu {
+        width: 67%;
+        z-index: 10;
+    }
+}
+
+@media (max-width:381px) {
+    .onTop .users-icon a {
+        font-size: 13px;
+    }
+
+    .list-submenu a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1245px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        position: absolute;
+        left: 21%;
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        position: absolute;
+        left: 27%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        position: absolute;
+        left: 16%;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bot .logo {
+        width: 140px;
+    }
+
+    .sideBar {
+        font-size: 20px;
+    }
+
+    .shopping .icon-shopping {
+        font-size: 20px;
+    }
+
+    .decor {
+        font-size: 15px;
+    }
+
+    .decor::after {
+        height: 1px;
+    }
+}
+
+@media (max-width: 500px) {
+    .bot .logo {
+        width: 120px;
+    }
+}
+
+@media (max-width:340px) {
+    .footer .connect .social a {
+        padding: 20px;
+        width: 20px;
+    }
+
+    .icon-social {
+        font-size: 18px;
+        top: 7px;
+        left: 12px;
+    }
+}
+
+/* category */
+.category-top p a {
+    text-decoration: none;
+    color: red;
+    font-size: 17px;
+}
+
+.category-top .pagePrev {
+    color: #000;
+    transition: 0.5s;
+}
+
+.category-top .pagePrev:hover {
+    color: red;
+}
+
+.category-top .pageSimp {
+    color: red;
+}
+
+.category-left {
+    margin: 15px 0;
+    ;
+}
+
+.category-left .category-left-li>a {
+    color: #000;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.category-left .category-left-li a {
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+}
+
+.category-left .category-left-li ul li {
+    margin: 15px 0;
+}
+
+.category-left .category-left-li ul li a {
+    transition: 0.5s;
+}
+
+.category-left .category-left-li ul li a:hover {
+    color: red;
+}
+
+.category-left .category-left-li .chevron i {
+    transform: rotate(180deg);
+}
+
+/* Slide Range */
+.range .field {
+    position: relative;
+    display: flex;
+}
+
+.range .field input {
+    height: 3px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.range .field .value {
+    position: absolute;
+    font-weight: 600;
+}
+
+.range .field .value.left {
+    left: 0;
+    top: 10px;
+}
+
+.range .field .value.right {
+    right: 0;
+    top: 10px;
+}
+
+.range .sliderValue {
+    text-align: center;
+    margin: 15px 0
+}
+
+.sliderValue span {
+    padding: 5px;
+    background-color: #66FF99;
+    color: red;
+    width: 30%;
+    display: inline-block;
+    border-radius: 30px;
+}
+
+.flex {
+    display: flex;
+    gap: 25px;
+    position: relative;
+}
+
+.symbol i {
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 3px;
+    border: 1px solid #D1D2D4;
+    padding: 5px;
+    border-radius: 5px 0 5px 0;
+    background: #ffffff;
+    font-size: 15px;
+}
+
+select {
+    outline: none;
+}
+
+.icon-according {
+    position: relative;
+}
+
+.sideAccording {
+    background: #ffffff;
+    padding: 15px 20px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 98%;
+    z-index: 10;
+    height: 80vh;
+    display: none;
+    transition: 0.5s;
+}
+
+.sideAccording.togle {
+    display: block;
+}
+
+.sideAccording ul li {
+    margin: 10px 0;
+}
+
+.sideAccording ul li a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+/* .range .field input {
+        height: 3px;
+        width: 60%;
+        outline: none;
+        border: none;
+    } */
+/* responsive Category.html*/
+@media (max-width:1200px) {
+    .detail {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .detail {
+        font-size: 13px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-left {
+        display: none;
+    }
+
+    select {
+        width: 100%;
+        border-radius: 24px;
+        line-height: 14px;
+        background: #ffffff;
+        border: 1px solid #E7E8E9;
+        outline: none;
+        padding: 5px;
+    }
+
+    .symbol i {
+        display: block;
+    }
+
+    .detail {
+        margin: 20px 0;
+    }
+}
