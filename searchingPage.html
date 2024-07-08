@@ -17,7 +17,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <title>Còng's book</title>
+    <title>Searching Page</title>
   </head>
   <body>
     <!-- Header -->
@@ -26,7 +26,11 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-5">
-              <input type="text" placeholder="Bạn cần tìm gì ?" />
+              <input
+                class="inputValue"
+                type="text"
+                placeholder="Bạn cần tìm gì ?"
+              />
               <span class="icon"
                 ><i class="fa-solid fa-magnifying-glass"></i
               ></span>
@@ -237,7 +241,7 @@
       <div class="category-top d-flex my-3">
         <p><a class="pagePrev" href="index.html">Trang Chủ</a></p>
         <span class="mx-2"><i class="fa-solid fa-chevron-right"></i></span>
-        <p><a class="pageSimp" href="javascript: ;">Sổ còng</a></p>
+        <p><a class="pageSimp" href="javascript: ;">Tìm Kiếm</a></p>
       </div>
       <div class="row">
         <div class="category-left col-md-4 col-lg-3 col-xl-3">
@@ -315,7 +319,7 @@
           <div class="category-right-top">
             <div class="row">
               <div class="col-md-10 col-lg-10 col-xl-10">
-                <h4>Sổ Còng</h4>
+                <h4>Lọc Sản Phẩm</h4>
               </div>
               <div class="flex col-md-2 col-lg-2 col-xl-2">
                 <select aria-label="label">
@@ -403,101 +407,29 @@
                   </ul>
                 </div>
               </div>
-              <p class="detail">
-                Điểm cộng của sổ còng chính là bạn có thể tách ruột sổ ra dễ
-                dàng, hoàn toàn có thể thay ruột sổ khi hết, bạn có thể tái sử
-                dụng những cuốn sổ này nhiều lần
-              </p>
+              <p class="detail"></p>
             </div>
           </div>
           <div class="bot">
-            <div class="row">
-              <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <h3
+              class="text-danger my-3 text-center"
+              id="para"
+              style="display: none"
+            >
+              Not Found
+            </h3>
+            <div class="row" id="card">
+              <!-- <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240321_PnMEv0H7iM.jpeg"
-                      class="card-img-top"
-                      alt=""
-                  /></a>
-                  <div class="card-body">
-                    <h5 class="card-title text-center">
-                      File bìa còng 2 đầu 10 chấu B5 Lite Binder
-                    </h5>
-                    <span class="card-star d-block text-center">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                    <div class="price text-center">
-                      16,000<span class="dong">đ</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card" style="width: 11rem">
-                  <a href="javascript: ;">
-                    <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240405_Rumvr0MMlZ.jpeg"
-                      class="card-img-top"
-                      alt=""
-                  /></a>
-                  <div class="card-body">
-                    <h5 class="card-title text-center">
-                      Sổ còng nhựa 2 đầu Panda S41
-                    </h5>
-                    <span class="card-star d-block text-center">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                    <div class="price text-center">
-                      35,000<span class="dong">đ</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card" style="width: 11rem">
-                  <a href="javascript: ;">
-                    <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240301_g9tc7K7T5z.png"
-                      class="card-img-top"
-                      alt=""
-                  /></a>
-                  <div class="card-body">
-                    <h5 class="card-title text-center">
-                      Sổ tay kẹp còng nhựa bìa PP ombre S40
-                    </h5>
-                    <span class="card-star d-block text-center">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </span>
-                    <div class="price text-center">
-                      18,000<span class="dong">đ</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card" style="width: 11rem">
-                  <a href="javascript: ;">
-                    <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240313_2D8LvssIOz.jpeg"
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20210621_COJ2NMxmNF1ifg68rY9eWhTT.jpg"
                       class="card-img-top"
                       alt=""
                   /></a>
                   <div class="card-body">
                     <h5 class="card-title text-start">
-                      Sổ tay A7 kẹp còng nhựa Movie Disney S37
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
                     </h5>
                     <span class="card-star d-block text-center">
                       <i class="fa-solid fa-star"></i>
@@ -507,22 +439,52 @@
                       <i class="fa-solid fa-star"></i>
                     </span>
                     <div class="price text-center">
-                      16,000<span class="dong">đ</span>
+                      36,860<span class="dong">đ</span>
                     </div>
                   </div>
+                  <div class="sale">-3%</div>
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240125_AoKxEHGHRr.png"
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
                       class="card-img-top"
                       alt=""
                   /></a>
                   <div class="card-body">
                     <h5 class="card-title text-start">
-                      Sổ còng nhựa 2 đầu Mickey S36
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
+                    </h5>
+                    <span class="card-star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
+                    </div>
+                  </div>
+                  <div class="sale">-3%</div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 11rem">
+                  <a href="javascript: ;">
+                    <img
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20210621_387GwixGfutVjQmM7AN5xamo.jpg"
+                      class="card-img-top"
+                      alt=""
+                  /></a>
+                  <div class="card-body">
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
                     </h5>
                     <span class="card-star d-block text-center">
                       <i class="fa-solid fa-star"></i>
@@ -532,7 +494,7 @@
                       <i class="fa-solid fa-star"></i>
                     </span>
                     <div class="price text-center">
-                      30,000<span class="dong">đ</span>
+                      36,860<span class="dong">đ</span>
                     </div>
                   </div>
                 </div>
@@ -541,177 +503,263 @@
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240314_47CGaydKnT.jpeg"
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
                       class="card-img-top"
                       alt=""
                   /></a>
                   <div class="card-body">
-                    <h5 class="card-title text-center">
-                      Sổ còng bìa vải khuy bấm vintage S30
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
                     </h5>
-                    <span class="card-star d-block text-center">
+                    <span class="card-star">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                     </span>
-                    <div class="price text-center">
-                      85,000<span class="dong">đ</span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
                     </div>
                   </div>
+                  <div class="sale">-3%</div>
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240313_TwBvgYI5XS.jpeg"
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
                       class="card-img-top"
                       alt=""
                   /></a>
                   <div class="card-body">
-                    <h5 class="card-title text-center">
-                      Sổ còng học ghi nhớ từ mới B5 S28
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
                     </h5>
-                    <span class="card-star d-block text-center">
+                    <span class="card-star">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                     </span>
-                    <div class="price text-center">
-                      51,000<span class="dong">đ</span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
                     </div>
                   </div>
+                  <div class="sale">-3%</div>
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240313_G9iZyT7wlM.jpeg"
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
                       class="card-img-top"
                       alt=""
                   /></a>
                   <div class="card-body">
-                    <h5 class="card-title text-center">
-                      Ruột bút mực đen B88R
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
                     </h5>
-                    <span class="card-star d-block text-center">
+                    <span class="card-star">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                     </span>
-                    <div class="price text-center">
-                      6,000<span class="dong">đ</span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
                     </div>
                   </div>
+                  <div class="sale">-3%</div>
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240313_pOY5JYeChS.jpeg"
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
                       class="card-img-top"
                       alt=""
                   /></a>
                   <div class="card-body">
-                    <h5 class="card-title text-center">
-                      Sổ còng 2 đầu B5 bìa trong suốt Never Give Up
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
                     </h5>
-                    <span class="card-star d-block text-center">
+                    <span class="card-star">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                     </span>
-                    <div class="price text-center">
-                      49,000<span class="dong">đ</span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
                     </div>
                   </div>
+                  <div class="sale">-3%</div>
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240313_8YxaCTsL5F.jpeg"
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
                       class="card-img-top"
                       alt=""
                   /></a>
                   <div class="card-body">
-                    <h5 class="card-title text-center">
-                      Ruột sổ kẹp còng caro 6x6 mm B5
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
                     </h5>
-                    <span class="card-star d-block text-center">
+                    <span class="card-star">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                     </span>
-                    <div class="price text-center">
-                      30,000<span class="dong">đ</span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
                     </div>
                   </div>
+                  <div class="sale">-3%</div>
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240313_Fnm3ujv5o3.jpeg"
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
                       class="card-img-top"
                       alt=""
                   /></a>
                   <div class="card-body">
-                    <h5 class="card-title text-center">
-                      Ruột sổ kẹp còng caro 5x5 mm B5
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
                     </h5>
-                    <span class="card-star d-block text-center">
+                    <span class="card-star">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                     </span>
-                    <div class="price text-center">
-                      26,000<span class="dong">đ</span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
                     </div>
                   </div>
+                  <div class="sale">-3%</div>
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
-                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240313_1rvrsjrLqK.jpeg"
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
                       class="card-img-top"
                       alt=""
                   /></a>
                   <div class="card-body">
-                    <h5 class="card-title text-center">
-                      Sổ còng Pastel B5 mix giấy caro + kẻ ngang
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
                     </h5>
-                    <span class="card-star d-block text-center">
+                    <span class="card-star">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                     </span>
-                    <div class="price text-center">
-                      98,000<span class="dong">đ</span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
                     </div>
                   </div>
+                  <div class="sale">-3%</div>
                 </div>
               </div>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 11rem">
+                  <a href="javascript: ;">
+                    <img
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
+                      class="card-img-top"
+                      alt=""
+                  /></a>
+                  <div class="card-body">
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
+                    </h5>
+                    <span class="card-star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
+                    </div>
+                  </div>
+                  <div class="sale">-3%</div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 11rem">
+                  <a href="javascript: ;">
+                    <img
+                      src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
+                      class="card-img-top"
+                      alt=""
+                  /></a>
+                  <div class="card-body">
+                    <h5 class="card-title text-start">
+                      Vở Dash Line lò xo kép bìa nhựa B5 200 trang
+                    </h5>
+                    <span class="card-star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <div class="price">
+                      36,860<span class="dong">đ</span>
+                      <span class="discount"
+                        >38,000<span class="dong">đ</span></span
+                      >
+                    </div>
+                  </div>
+                  <div class="sale">-3%</div>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -810,12 +858,69 @@
     ></script>
     <script src="slideRange.js"></script>
     <script src="subMenu.js"></script>
+    <script src="product.js"></script>
     <script>
       const iconAccording = document.querySelector(".icon-according");
       const sideAccording = document.querySelector(".sideAccording");
       iconAccording.addEventListener("click", function () {
         iconAccording.classList.toggle("togle");
         sideAccording.classList.toggle("togle");
+      });
+      //   Xử lý truyền key value
+      showProduct(product);
+      function showProduct(product) {
+        document.getElementById("card").innerText = "";
+        product.forEach((element) => {
+          document.getElementById(
+            "card"
+          ).innerHTML += `<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 11rem">
+                  <a href="javascript: ;">
+                    <img
+                      src="${element.src}"
+                      class="card-img-top"
+                      alt=""
+                  /></a>
+                  <div class="card-body">
+                    <h5 class="card-title text-start">
+                      ${element.name}
+                    </h5>
+                    <span class="card-star d-block text-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <div class="price text-center">
+                    ${element.price}<span class="dong">đ</span>
+                    </div>
+                  </div>
+                  <div class="sale">${element.sale}</div>
+                </div>
+              </div>
+        `;
+        });
+      }
+      //   Xử lý filter
+      const icon = document.querySelector(".icon");
+      const input = document.querySelector(".inputValue");
+      icon.addEventListener("click", function () {
+        const text = document.querySelector(".inputValue").value;
+        empty = product.filter(function (e) {
+          if (e.name.toLowerCase().includes(text)) {
+            return e.name;
+          }
+        });
+        if (this.value == "") {
+          showProduct(product);
+        } else if (empty == "") {
+          document.getElementById("para").style.display = "block";
+          document.getElementById("card").innerHTML = "";
+        } else {
+          showProduct(empty);
+          document.getElementById("para").style.display = "none";
+        }
       });
     </script>
   </body>

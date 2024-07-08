@@ -26,10 +26,15 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-5">
-              <input type="text" placeholder="Bạn cần tìm gì ?" />
+              <input
+                class="inputValue"
+                type="text"
+                placeholder="Bạn cần tìm gì ?"
+              />
               <span class="icon"
                 ><i class="fa-solid fa-magnifying-glass"></i
               ></span>
+              <ul class="listProduct d-flex"></ul>
             </div>
             <div class="col-lg-7">
               <ul class="list">
@@ -48,7 +53,7 @@
         <div class="container">
           <div class="row">
             <div class="text-center col-lg-2">
-              <a href="" class="logo"
+              <a href="index.html" class="logo"
                 ><img
                   src="https://pos.nvncdn.com/7a6d8f-102734/store/20240330_qTonsoiM.jpg"
                   alt=""
@@ -314,7 +319,10 @@
     <!--Hot product  -->
     <div class="container">
       <h3 class="text-center my-5 decor">TOP 6 SẢN PHẨM HOT NHẤT TUẦN</h3>
-      <div class="row">
+      <h3 class="text-danger my-3 text-center" id="para" style="display: none">
+        Not Found
+      </h3>
+      <div class="row" id="card">
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-2">
           <div class="card" style="width: 11rem">
             <a href="javascript: ;">
@@ -324,10 +332,10 @@
                 alt=""
             /></a>
             <div class="card-body">
-              <h5 class="card-title text-start">
+              <h5 class="card-title text-center">
                 Vở Dash Line lò xo kép bìa nhựa B5 200 trang
               </h5>
-              <span class="card-star">
+              <span class="card-star d-block text-center">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -351,10 +359,10 @@
                 alt=""
             /></a>
             <div class="card-body">
-              <h5 class="card-title text-start">
-                Vở Dash Line lò xo kép bìa nhựa B5 200 trang
+              <h5 class="card-title text-center">
+                Vở Dash Line lò xo kép bìa nhựa B5 120 trang
               </h5>
-              <span class="card-star">
+              <span class="card-star d-block text-center">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -362,8 +370,8 @@
                 <i class="fa-solid fa-star"></i>
               </span>
               <div class="price">
-                36,860<span class="dong">đ</span>
-                <span class="discount">38,000<span class="dong">đ</span></span>
+                26,000<span class="dong">đ</span>
+                <span class="discount">31,200<span class="dong">đ</span></span>
               </div>
             </div>
             <div class="sale">-3%</div>
@@ -378,10 +386,10 @@
                 alt=""
             /></a>
             <div class="card-body">
-              <h5 class="card-title text-start">
-                Vở Dash Line lò xo kép bìa nhựa B5 200 trang
+              <h5 class="card-title text-center">
+                Vở Dash Line lò xo kép bìa nhựa A5 200 trang
               </h5>
-              <span class="card-star">
+              <span class="card-star d-block text-center">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -389,8 +397,8 @@
                 <i class="fa-solid fa-star"></i>
               </span>
               <div class="price">
-                36,860<span class="dong">đ</span>
-                <span class="discount">38,000<span class="dong">đ</span></span>
+                30,000<span class="dong">đ</span>
+                <span class="discount">36,000<span class="dong">đ</span></span>
               </div>
             </div>
             <div class="sale">-3%</div>
@@ -405,10 +413,10 @@
                 alt=""
             /></a>
             <div class="card-body">
-              <h5 class="card-title text-start">
-                Vở Dash Line lò xo kép bìa nhựa B5 200 trang
+              <h5 class="card-title text-center">
+                Vở Dash Line lò xo kép bìa nhựa A5 120 trang
               </h5>
-              <span class="card-star">
+              <span class="card-star d-block text-center">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -416,8 +424,8 @@
                 <i class="fa-solid fa-star"></i>
               </span>
               <div class="price">
-                36,860<span class="dong">đ</span>
-                <span class="discount">38,000<span class="dong">đ</span></span>
+                22,000<span class="dong">đ</span>
+                <span class="discount">26,400<span class="dong">đ</span></span>
               </div>
             </div>
             <div class="sale">-3%</div>
@@ -432,10 +440,10 @@
                 alt=""
             /></a>
             <div class="card-body">
-              <h5 class="card-title text-start">
-                Vở Dash Line lò xo kép bìa nhựa B5 200 trang
+              <h5 class="card-title text-center">
+                Vở Dash Line lò xo kép bìa nhựa C5 200 trang
               </h5>
-              <span class="card-star">
+              <span class="card-star d-block text-center">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -443,8 +451,8 @@
                 <i class="fa-solid fa-star"></i>
               </span>
               <div class="price">
-                36,860<span class="dong">đ</span>
-                <span class="discount">38,000<span class="dong">đ</span></span>
+                28,860<span class="dong">đ</span>
+                <span class="discount">32,000<span class="dong">đ</span></span>
               </div>
             </div>
             <div class="sale">-3%</div>
@@ -459,10 +467,10 @@
                 alt=""
             /></a>
             <div class="card-body">
-              <h5 class="card-title text-start">
-                Vở Dash Line lò xo kép bìa nhựa B5 200 trang
+              <h5 class="card-title text-center">
+                Vở Dash Line lò xo kép bìa nhựa C5 120 trang
               </h5>
-              <span class="card-star">
+              <span class="card-star d-block text-center">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -470,8 +478,8 @@
                 <i class="fa-solid fa-star"></i>
               </span>
               <div class="price">
-                36,860<span class="dong">đ</span>
-                <span class="discount">38,000<span class="dong">đ</span></span>
+                22,000<span class="dong">đ</span>
+                <span class="discount">28,000<span class="dong">đ</span></span>
               </div>
             </div>
             <div class="sale">-3%</div>
@@ -1360,5 +1368,90 @@
     ></script>
     <script src="subMenu.js"></script>
     <script src="slideRange.js"></script>
+    <script src="product.js"></script>
+    <script>
+      // Xử lý filter
+      const icon = document.querySelector(".icon");
+      const input = document.querySelector(".inputValue");
+      icon.addEventListener("click", function (event) {
+        // Tìm Sổ
+        if (
+          input.value.toUpperCase() == "Sổ Kế Hoạch" ||
+          input.value.toLowerCase() == "sổ kế hoạch"
+        ) {
+          window.location.href = "category.html";
+        } else if (
+          input.value.toUpperCase() == "Sổ Ghi Chép" ||
+          input.value.toLowerCase() == "sổ ghi chép"
+        ) {
+          window.location.href = "notebook.html";
+        } else if (
+          input.value.toUpperCase() == "Sổ Vẽ" ||
+          input.value.toLowerCase() == "sổ vẽ"
+        ) {
+          window.location.href = "drawbook.html";
+        } else if (
+          input.value.toUpperCase() == "Sổ Tay Nhỏ" ||
+          input.value.toLowerCase() == "sổ tay nhỏ"
+        ) {
+          window.location.href = "smallbook.html";
+        } else if (
+          input.value.toUpperCase() == "Giấy Note" ||
+          input.value.toLowerCase() == "giấy note"
+        ) {
+          window.location.href = "note.html";
+        } else if (
+          input.value.toUpperCase() == "Sổ Còng" ||
+          input.value.toLowerCase() == "sổ còng"
+        ) {
+          window.location.href = "Còng's book.html";
+        } else if (
+          input.value.toUpperCase() == "Vở Ô Ly" ||
+          input.value.toLowerCase() == "vở ô ly"
+        ) {
+          window.location.href = "Umbrellabook.html";
+        }
+
+        // Tìm bút
+        if (
+          input.value.toUpperCase() == "Bút Khác" ||
+          input.value.toLowerCase() == "bút khác"
+        ) {
+          window.location.href = "differentPen.html";
+        } else if (
+          input.value.toUpperCase() == "Bút Chì" ||
+          input.value.toLowerCase() == "bút chì"
+        ) {
+          window.location.href = "pencil.html";
+        } else if (
+          input.value.toUpperCase() == "Bút Highlight" ||
+          input.value.toLowerCase() == "bút highlight"
+        ) {
+          window.location.href = "highlightPen.html";
+        } else if (
+          input.value.toUpperCase() == "Bút Gel" ||
+          input.value.toLowerCase() == "bút gel"
+        ) {
+          window.location.href = "Gel's Pen.html";
+        } else if (
+          input.value.toUpperCase() == "Bút Dạ" ||
+          input.value.toLowerCase() == "bút dạ"
+        ) {
+          window.location.href = "Dạ's Pen.html";
+        } else if (
+          input.value.toUpperCase() == "Bút Bi" ||
+          input.value.toLowerCase() == "bút bi"
+        ) {
+          window.location.href = "pen.html";
+        } else if (
+          input.value.toUpperCase() == "Bút Màu" ||
+          input.value.toLowerCase() == "bút màu"
+        ) {
+          window.location.href = "colorPen.html";
+        } else {
+          window.location.href = "searchingPage.html";
+        }
+      });
+    </script>
   </body>
 </html>
