@@ -232,7 +232,7 @@
         </div>
       </div>
     </div>
-    <!-- Category -->
+    <!-- list product -->
     <div class="container">
       <div class="category-top d-flex my-3">
         <p><a class="pagePrev" href="index.html">Trang Chủ</a></p>
@@ -243,19 +243,18 @@
           >
         </p>
       </div>
-      <div class="row">
-        <div class="detail-left col-xl-6">
+      <div class="row" id="detailTop">
+        <div class="detail-left col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <div class="pic">
             <img
-              style="width: 407px; height: 407px"
               src="https://pos.nvncdn.com/7a6d8f-102734/ps/20240424_DkfC0x3cDk.jpeg"
               alt=""
             />
           </div>
         </div>
-        <div class="detail right col-xl-6">
+        <div class="detail-right mt-4 col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <h4>Vở Dash Line lò xo kép bìa nhựa B5 200 trang</h4>
-          <span class="star">
+          <span class="star d-block py-1">
             <i class="fa-solid fa-star text-warning"></i>
             <i class="fa-solid fa-star text-warning"></i>
             <i class="fa-solid fa-star text-warning"></i>
@@ -263,6 +262,57 @@
             <i class="fa-solid fa-star text-warning"></i>
           </span>
           <div class="price fs-4 mt-2">38,000<span class="dong">đ</span></div>
+          <div class="status mt-2">Trạng thái: <span>Còn hàng</span></div>
+          <div class="choose-number d-flex py-3 gap-4">
+            <p class="number">Số lượng:</p>
+            <div class="quality">
+              <span><i class="fa-solid fa-minus" aria-hidden="true"></i></span>
+              <input type="text" value="1" aria-label="quantity" disabled />
+              <span><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+            </div>
+          </div>
+          <div class="add-cart d-flex gap-3">
+            <a class="btns" href="javascipt:;"
+              ><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng</a
+            >
+            <a class="btns" href="javascipt:;"
+              ><i class="fa-solid fa-cart-plus"></i> Mua ngay</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row my-5" id="detailBot">
+        <div class="col-xl-12">
+          <div class="desc">
+            <h4 class="description">Mô tả</h4>
+            <p>
+              Vở Klong lò xo kép màu vàng ánh ngọc với bìa nhựa viền chéo PP tạo
+              sự đơn giản nhưng chắc chắn, tiện lợi và sang trọng Có nhiều phân
+              loại để ban lựa chọn trong link Tổng hợp này. (Video mô tả là mã
+              Ms585) Đặc điểm từng phân loại: Ms592: Vở A5 caro nét đứt ô 6x6mm,
+              120 tr
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-12">
+          <div class="character">
+            <h4 class="charac d-flex justify-content-between">
+              Đặc điểm nổi bật <i class="fa-solid fa-plus"></i>
+            </h4>
+            <ul class="list-charac">
+              <li>- Kết cấu lò xo kép, bìa trong suốt 2 mặt</li>
+              <li>- Định lượng: 100g/m2</li>
+              <li>- Độ trắng: 76% ISO</li>
+              <li>
+                - Ruột vở được in offset sắc nét trên giấy có độ dày cao
+                (100g/m2), độ trắng kem tự nhiên (76%ISO) có thể viết, vẽ với
+                tất cả các loại mực, màu gốc nước không bị nhòe, lem, không gây
+                mỏi mắt khi đọc, viết.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -359,12 +409,100 @@
     ></script>
     <script src="slideRange.js"></script>
     <script src="subMenu.js"></script>
+    <script src="product.js"></script>
     <script>
-      const iconAccording = document.querySelector(".icon-according");
-      const sideAccording = document.querySelector(".sideAccording");
-      iconAccording.addEventListener("click", function () {
-        iconAccording.classList.toggle("togle");
-        sideAccording.classList.toggle("togle");
+      // Lấy biến trên URL
+      const url = new URL(window.location.href);
+      const id = url.searchParams.get("id");
+      console.log(id);
+
+      // Log ra object sản phẩm đúng id đó
+      //  Tim san pham trong mang dung voi id tren URLs
+      const detailProduct = product.find((element) => element.id == id);
+      console.log(detailProduct);
+
+      // Show dữ liệu ra Dom
+      const detailTop = document.getElementById("detailTop");
+      const detailBot = document.getElementById("detailBot");
+      detailTop.innerHTML = ` <div class="detail-left col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <div class="pic">
+            <img
+              src="${detailProduct.src}"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="detail-right mt-4 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <h4>${detailProduct.name}</h4>
+          <span class="star d-block py-1">
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+          </span>
+          <div class="price fs-4 mt-2">${detailProduct.price}<span class="dong">đ</span></div>
+          <div class="status mt-2">Trạng thái: <span>${detailProduct.status}</span></div>
+          <div class="choose-number d-flex py-3 gap-4">
+            <p class="number">Số lượng:</p>
+            <div class="quality">
+              <span><i class="fa-solid fa-minus" aria-hidden="true"></i></span>
+              <input type="text" value="1" aria-label="quantity" disabled />
+              <span><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+            </div>
+          </div>
+          <div class="add-cart d-flex gap-3">
+            <a class="btns" href="javascipt:;"
+              ><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng</a
+            >
+            <a class="btns" href="javascipt:;"
+              ><i class="fa-solid fa-cart-plus"></i> Mua ngay</a
+            >
+          </div>
+        </div>`;
+      detailBot.innerHTML = `<div class="col-xl-12">
+          <div class="desc">
+            <h4 class="description">Mô tả</h4>
+            <p>
+              ${detailProduct.describe}
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-12">
+          <div class="character">
+            <h4 class="charac d-flex justify-content-between">
+              Đặc điểm nổi bật <i class="fa-solid fa-plus"></i>
+            </h4>
+            <ul class="list-charac">
+              <li>${detailProduct.charac1}</li>
+              <li>${detailProduct.charac2}</li>
+              <li>${detailProduct.charac3}</li>
+              <li>
+                ${detailProduct.charac4}
+              </li>
+            </ul>
+          </div>
+        </div>`;
+
+      // Xử lý input value
+      const input = document.querySelector(".quality input");
+      const plus = document.querySelector(".fa-plus");
+      const minus = document.querySelector(".fa-minus");
+      plus.addEventListener("click", function () {
+        input.value++;
+      });
+      minus.addEventListener("click", function () {
+        if (input.value > 1) {
+          input.value--;
+        }
+      });
+
+      // Xử lý desc
+      const desc = document.querySelector(".charac");
+      const list = document.querySelector(".list-charac");
+      desc.addEventListener("click", function () {
+        desc.classList.toggle("active");
+        list.classList.toggle("active");
       });
     </script>
   </body>

@@ -793,3 +793,141 @@ select {
     }
 }
 /* detail.html */
+.pic img{
+    border: 1px solid #000;
+    cursor: pointer;
+    width: 407px;
+    height: 407px
+}
+.status{
+    font-size: 18px;
+}
+.number {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.quality {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.quality span {
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+}
+.quality input {
+    border: navajowhite;
+    text-align: center;
+    width: 60px;
+    padding: 10px 15px;
+    outline: none;
+}
+.add-cart .btns{
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    box-shadow: none;
+    border-radius: 5px;
+    padding: 13px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #e32124;
+    color: #fff;
+    transition: 0.5s;
+    text-decoration: none;
+    margin: 15px 0;
+}
+.add-cart .btns:hover{
+    background-color: #f83333dd;
+}
+.description p{
+    font-size: 18px;
+}
+.list-charac li{
+    list-style: disc;
+    margin: 15px 0;
+    height: 0px;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.list-charac.active li{
+    height: 50px;
+}
+.charac{
+    cursor: pointer;
+}
+.charac i{
+    transition: 0.5s;
+}
+.charac.active i{
+    transform: rotate(45deg);
+}
+/* responsive */
+@media (max-width:992px){
+.pic img {
+    transform: translateX(35%);
+}
+}
+@media (max-width:768px) {
+.pic img {
+    width: 300px;
+    height: 300px;
+    transform: translateX(40%);
+}
+.add-cart .btns {
+    width: 40%;
+}
+}
+@media (max-width:546px){
+.pic img{
+    transform: translateX(50%);
+    width: 250px;
+    height: 250px;
+}
+.category-top .pagePrev {
+    font-size: 12px;
+}
+.category-top .pageSimp {
+    font-size: 12px;
+}
+}
+@media (max-width:479px){
+.add-cart .btns {
+    width: 50%;
+    padding: 10px;
+    font-size: 11px;
+}
+.detail-right h4{
+    font-size: 14px;
+}
+.star{
+    font-size: 14px;
+}
+.price{
+    font-size: 14px;
+}
+.status{
+    font-size: 14px;
+}
+.number{
+    font-size: 14px;
+}
+.quality input{
+    width: 30px;
+    padding: 10px;
+}
+}
+@media (max-width:408px){
+    .pic img{
+        width: 200px;
+        height: 200px;
+        transform: translateX(27%);
+    }
+}
