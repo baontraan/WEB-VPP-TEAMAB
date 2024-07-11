@@ -234,14 +234,14 @@
     </div>
     <!-- list product -->
     <div class="container">
-      <div class="category-top d-flex my-3">
-        <p><a class="pagePrev" href="index.html">Trang Chủ</a></p>
+      <div class="category-top d-flex my-3" id="changeName">
+        <!-- <p><a class="pagePrev" href="index.html">Trang Chủ</a></p>
         <span class="mx-2"><i class="fa-solid fa-chevron-right"></i></span>
         <p>
           <a class="pageSimp" href="javascript: ;"
             >Vở Dash Line lò xo kép bìa nhựa B5 200 trang</a
           >
-        </p>
+        </p> -->
       </div>
       <div class="row" id="detailTop">
         <div class="detail-left col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -424,6 +424,7 @@
       // Show dữ liệu ra Dom
       const detailTop = document.getElementById("detailTop");
       const detailBot = document.getElementById("detailBot");
+      const changeName = document.getElementById("changeName");
       detailTop.innerHTML = ` <div class="detail-left col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <div class="pic">
             <img
@@ -484,6 +485,15 @@
           </div>
         </div>`;
 
+      changeName.innerHTML = `<div class="category-top d-flex my-3" id="changeName">
+        <p><a class="pagePrev" href="index.html">Trang Chủ</a></p>
+        <span class="mx-2"><i class="fa-solid fa-chevron-right"></i></span>
+        <p>
+          <a class="pageSimp" href="javascript: ;"
+            >${detailProduct.name}</a
+          >
+        </p>
+      </div>`;
       // Xử lý input value
       const input = document.querySelector(".quality input");
       const plus = document.querySelector(".fa-plus");
