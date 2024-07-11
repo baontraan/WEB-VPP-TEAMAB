@@ -854,6 +854,7 @@
     <script src="slideRange.js"></script>
     <script src="subMenu.js"></script>
     <script src="product.js"></script>
+    <script src="productCate.js"></script>
     <script>
       const iconAccording = document.querySelector(".icon-according");
       const sideAccording = document.querySelector(".sideAccording");
@@ -864,7 +865,7 @@
 
       // Truyền key value cho danh sách sản phẩm
       const listProduct = document.getElementById("listProduct");
-      product.forEach((element) => {
+      productCate.forEach((element) => {
         listProduct.innerHTML += `<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="detail.html?id=${element.id}">

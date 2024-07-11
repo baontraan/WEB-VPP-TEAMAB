@@ -414,8 +414,8 @@
             </div>
           </div>
           <div class="bot">
-            <div class="row">
-              <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="row" id="listProduct">
+              <!-- <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
                   <a href="javascript: ;">
                     <img
@@ -722,7 +722,7 @@
                   </div>
                   <div class="sale">-3%</div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -821,12 +821,43 @@
     ></script>
     <script src="slideRange.js"></script>
     <script src="subMenu.js"></script>
+    <script src="productNote.js"></script>
     <script>
       const iconAccording = document.querySelector(".icon-according");
       const sideAccording = document.querySelector(".sideAccording");
       iconAccording.addEventListener("click", function () {
         iconAccording.classList.toggle("togle");
         sideAccording.classList.toggle("togle");
+      });
+
+      // Truyền key value cho danh sách sản phẩm
+      const listProduct = document.getElementById("listProduct");
+      productNote.forEach((element) => {
+        listProduct.innerHTML += `<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 11rem">
+                  <a href="detail.html?id=${element.id}">
+                    <img
+                      src="${element.src}"
+                      class="card-img-top"
+                      alt=""
+                  /></a>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">
+                      ${element.name}
+                    </h5>
+                    <span class="card-star d-block text-center">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <div class="price text-center">
+                    ${element.price}<span class="dong">đ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>`;
       });
     </script>
   </body>
