@@ -938,6 +938,10 @@ select {
 }
 
 /*  css Modal trong detail.html */
+.list-cart{
+    width: 60%;
+    margin: 0 auto;
+}
 .cart-item{
     background-color: #fff;
         padding: 20px;
@@ -1020,4 +1024,54 @@ select {
 }
 .contentLeft .quantity input:focus {
     outline: none;
+}
+.s_total{
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.s_total .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 19px;
+}
+.s_total .info {
+    font-weight: bold;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+.cartIcon{
+    
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff8d00;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border: 1px solid #fff;
+        
+}
+.cartIcon i {
+    font-size: 22px;
+}
+
+.cartIcon span {
+    font-size: 21px;
+    margin-left: 10px;
+    font-weight: 600;
+    color: red;
 }

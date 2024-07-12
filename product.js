@@ -2185,3 +2185,8 @@ const product = [
 const arrCart = localStorage.getItem("List_Cart")
   ? JSON.parse(localStorage.getItem("List_Cart"))
   : [];
+function countCart() {
+  const cartCount = document.querySelector(".cartIcon span");
+  cartCount.innerHTML = arrCart.length;
+}
+countCart();
