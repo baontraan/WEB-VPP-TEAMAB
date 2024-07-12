@@ -2182,3 +2182,6 @@ const product = [
     charac4: "- Kích thước: (148 x 210) mm",
   },
 ];
+const arrCart = localStorage.getItem("List_Cart")
+  ? JSON.parse(localStorage.getItem("List_Cart"))
+  : [];
