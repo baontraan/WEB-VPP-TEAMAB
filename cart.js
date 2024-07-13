@@ -2,7 +2,7 @@ const listCart = document.querySelector(".list-cart");
 const total = document.querySelector(".total span");
 let sumPrice = 0;
 arrCart.forEach((element, index) => {
-  sumPrice += element.price * element.quantity;
+  sumPrice += parseFloat(element.price) * element.quantity;
   listCart.innerHTML += `<div class="cart-item" data-index= "${index}">
           <div class="item-img">
             <img
@@ -18,7 +18,7 @@ arrCart.forEach((element, index) => {
                 </h3>
               </div>
               <div class="delete">
-                <a href="javascript:;"><i class="fa-solid fa-trash-can"></i></a>
+                <a href="javascript:;" onclick="changeCart(event,'delete')" ><i class="fa-solid fa-trash-can"></i></a>
               </div>
             </div>
             <div class="content-bot">
@@ -40,12 +40,12 @@ arrCart.forEach((element, index) => {
                 </div>
               </div>
               <div class="price text-center">
-              ${element.price * element.quantity}
+              ${parseFloat(element.price) * element.quantity}
                 
               </div>
-              <div class="pricecore" style="display: none" >${
+              <div class="pricecore" style="display: none" >${parseFloat(
                 element.price
-              }</div>
+              )}</div>
             </div>
           </div>
         </div>`;
@@ -55,29 +55,28 @@ function changeCart(event, type) {
   const cartItem = event.target.closest(".cart-item");
   let quantity = cartItem.querySelector(".quantity input");
   const index = cartItem.getAttribute("data-index");
-  const price = cartItem.querySelector(".price span");
+  const price = cartItem.querySelector(".price");
   const priceCore = cartItem.querySelector(".pricecore");
+  const sTotal = document.querySelector(".s_total");
   if (type == "plus") {
     quantity.value++;
-    price.innerHTML = priceCore.innerHTML * quantity.value;
-    console.log(price);
-    arrCart[index].quantity = quantity.value;
   } else if (type == "minus") {
     if (quantity.value > 1) {
       quantity.value--;
-      price.innerHTML = priceCore.innerHTML * quantity.value;
-      arrCart[index].quantity = quantity.value;
-    } else {
-      cartItem.style.display = "none";
-      arrCart.splice(index, 1);
-      quantity.value = quantity.value;
     }
+  } else {
+    cartItem.style.display = "none";
+    arrCart.splice(index, 1);
+    total.innerHTML = "";
+    countCart();
+    localStorage.removeItem("List_Cart");
   }
+  price.innerHTML = priceCore.innerHTML * quantity.value;
+  arrCart[index].quantity = quantity.value;
   let sumPrice = 0;
   arrCart.forEach((element) => {
-    sumPrice += element.price * element.quantity;
+    sumPrice += parseFloat(element.price) * element.quantity;
   });
   total.innerHTML = sumPrice;
   localStorage.setItem("List_Cart", JSON.stringify(arrCart));
-  console.log(cartItem);
 }

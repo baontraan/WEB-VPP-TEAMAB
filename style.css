@@ -973,12 +973,19 @@ select {
     margin-bottom: 7px;
     font-size: 20px;
 }
-.cart-item .item-content .content-top .delete a {
+.content-top .delete{
+    width: 20%;
+    text-align: right;
+}
+ .content-top .delete a {
     background-color: #f2f2f2;
     padding: 12px 13px 7px;
     border-radius: 5px;
+    text-decoration: none;
 }
-
+.content-top .delete a i {
+    color: #000;
+}
 .cart-item .item-content .content-bot {
     display: flex;
     align-items: center;
