@@ -27,7 +27,7 @@ detailTop.innerHTML = ` <div class="detail-left col-sm-12 col-md-12 col-lg-6 col
             <i class="fa-solid fa-star text-warning"></i>
             <i class="fa-solid fa-star text-warning"></i>
           </span>
-          <div class="price fs-4 mt-2">38,000<span class="dong">đ</span></div>
+          <div class="price fs-4 mt-2">${detailProduct.price}<span class="dong">đ</span></div>
           <div class="status mt-2">Trạng thái: <span>${detailProduct.status}</span></div>
           <div class="choose-number d-flex py-3 gap-4">
             <p class="number">Số lượng:</p>
@@ -40,7 +40,7 @@ detailTop.innerHTML = ` <div class="detail-left col-sm-12 col-md-12 col-lg-6 col
           <div class="add-cart d-flex gap-3">
             <a
               class="btns"
-              href=""
+              href="javascript:;"
               onclick="addToCart()"
               ><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng</a
             >
@@ -84,18 +84,18 @@ changeName.innerHTML = `<div class="category-top d-flex my-3" id="changeName">
         </p>
       </div>`;
 
-//   function Add To Cart
-function addTocart() {
-  // Gan so luong cho 1 san pham them vao
+// function Add To Cart
+function addToCart() {
+  // Gán số lượng cho 1 sản phẩm khi thêm vào
   detailProduct.quantity = 1;
-  // Tim san pham do co dang co trong gio hang khong
+  // Tìm sản phẩm đó có trong giỏ hàng chưa
   const findIndexProduct = arrCart.findIndex((item) => item.id == id);
-  // Neu co thi chi tang so luong chu khong them vao
+  // Nếu có thì tăng số lượng chứ không thêm vào
   if (findIndexProduct >= 0) {
     arrCart[findIndexProduct].quantity++;
   } else {
     arrCart.push(detailProduct);
     countCart();
   }
-  localStorage.setItem("list_Cart", JSON.stringify(arrCart));
+  localStorage.setItem("List_Cart", JSON.stringify(arrCart));
 }
