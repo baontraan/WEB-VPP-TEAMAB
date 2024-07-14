@@ -41,7 +41,9 @@
                 <li><a href="">Đăng nhập</a></li>
                 <li><a href="">Đăng ký</a></li>
                 <li>
-                  <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+                  <a href="cart.html" class="cartIcon"
+                    ><i class="fa-solid fa-cart-shopping"></i><span>0</span></a
+                  >
                 </li>
               </ul>
             </div>
@@ -158,9 +160,9 @@
                 ><i class="fa-solid fa-xmark"></i>
               </div>
               <div class="shopping">
-                <a class="icon-shopping" href=""
-                  ><i class="fa-solid fa-bag-shopping"></i
-                ></a>
+                <a class="icon-shopping" href="cart.html"
+                  ><i class="fa-solid fa-cart-shopping"></i><span>0</span></a
+                >
               </div>
               <!-- SUB MENU -->
               <div class="sub-menu">
@@ -875,7 +877,7 @@
             "card"
           ).innerHTML += `<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card" style="width: 11rem">
-                  <a href="javascript: ;">
+                  <a href="detail.html?id=${element.id}">
                     <img
                       src="${element.src}"
                       class="card-img-top"

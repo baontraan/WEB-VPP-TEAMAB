@@ -96,6 +96,7 @@ function addToCart() {
   } else {
     arrCart.push(detailProduct);
     countCart();
+    countShopping();
   }
   localStorage.setItem("List_Cart", JSON.stringify(arrCart));
 }

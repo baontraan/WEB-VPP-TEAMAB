@@ -2190,3 +2190,9 @@ function countCart() {
   cartCount.innerHTML = arrCart.length;
 }
 countCart();
+
+function countShopping() {
+  const shoppingCount = document.querySelector(".icon-shopping span");
+  shoppingCount.innerHTML = arrCart.length;
+}
+countShopping();

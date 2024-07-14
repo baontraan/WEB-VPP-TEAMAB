@@ -39,8 +39,8 @@ arrCart.forEach((element, index) => {
                   ></span>
                 </div>
               </div>
-              <div class="price text-center">
-              ${parseFloat(element.price) * element.quantity}
+              <div style =" font-size: 18px" class="price me-2">
+              ${parseFloat(element.price) * element.quantity} 
                 
               </div>
               <div class="pricecore" style="display: none" >${parseFloat(
@@ -60,19 +60,21 @@ function changeCart(event, type) {
   const sTotal = document.querySelector(".s_total");
   if (type == "plus") {
     quantity.value++;
+    arrCart[index].quantity = quantity.value;
   } else if (type == "minus") {
     if (quantity.value > 1) {
       quantity.value--;
+      arrCart[index].quantity = quantity.value;
     }
   } else {
     cartItem.style.display = "none";
     arrCart.splice(index, 1);
-    total.innerHTML = "";
     countCart();
-    localStorage.removeItem("List_Cart");
+    countShopping();
+    // localStorage.setItem("Lisy_Cart", JSON.stringify(arrCart));
   }
   price.innerHTML = priceCore.innerHTML * quantity.value;
-  arrCart[index].quantity = quantity.value;
+  // arrCart[index].quantity = quantity.value;
   let sumPrice = 0;
   arrCart.forEach((element) => {
     sumPrice += parseFloat(element.price) * element.quantity;
